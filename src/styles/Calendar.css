@@ -48,3 +48,8 @@ a.fc-event:has(div.view-only) {
 .photo-calendar {
     width: 100rem;
 }
+
+.bad-apple-calendar {
+    /* max-height: 80vh; */
+    aspect-ratio: 4 / 3;
+}

@@ -20,6 +20,7 @@ import Footer from './components/Footer';
 import useDownloadImage from './utils/image';
 import { useQuery } from '@tanstack/react-query';
 import { toast, ToastContainer } from 'react-toastify';
+import BadAppleCalendar from './calendars/BadAppleCalendar';
 
 const readStoredTimetable = (storageTimetable: string) => {
     let save = false;
@@ -212,12 +213,12 @@ const App: React.FC = () => {
                             )}
 
                             {dataUpdatedAt !== 0 && !viewOnly && (
+                            
                                 <Grid item xs={12}>
                                     <Paper sx={{ p: 2 }}>
-                                        <ResultsCalendar
-                                            lessonsResults={searchResults}
-                                            ownLessons={savedLessons}
-                                            onEventClick={handleCalendarClick}
+                                        <BadAppleCalendar
+                                            onImageDownload={handleDownloadImage}
+                                            onUrlExport={handleUrlExport}
                                         />
                                     </Paper>
                                 </Grid>
